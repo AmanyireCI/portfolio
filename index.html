@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of AmanyireCI - Computer Science Student & Full Stack Developer">
-    <meta name="keywords" content="developer, portfolio, projects, computer science, full stack">
-    <title>AmanyireCI - CS Student & Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Amanyire Cindy - Computer Science Student & Full Stack Developer Portfolio" />
+    <title>Amanyire Cindy | CS Student & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#" class="logo">AmanyireCI</a>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <a href="#" class="logo">AC.</a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -37,96 +40,141 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-eyebrow"><span class="status-dot"></span>Open to Work &mdash; Graduating 2027</div>
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">AMANYIRE CINDY</span>
-                </h1>
-                <p class="hero-subtitle">
-                    <span class="accent-text">CS Student</span> | Full Stack Developer
-                </p>
-                <p class="hero-description">
-                    Passionate about building scalable web applications and machine learning solutions. 
-                    Finalist CS student graduating soon with hands-on experience in full-stack development.
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/AmanyireCI" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/amanyireci" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/amanyireci" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <!-- Profile Picture Section -->
-                <div class="profile-frame">
-                    <span class="frame-corner tl"></span>
-                    <span class="frame-corner tr"></span>
-                    <span class="frame-corner bl"></span>
-                    <span class="frame-corner br"></span>
-                    <span class="frame-tag">/dev/portrait</span>
-                    <div class="profile-image-container">
-                        <!-- Replace the src below with your actual image URL -->
-                        <img id="profileImage" src="presentable pics/redd1.jpeg" alt="AmanyireCI Profile" class="profile-image">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Available for opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <br />
+                        <span class="gradient-text">AMANYIRE CINDY</span>
+                    </h1>
+                    <div class="hero-role">
+                        <span class="role-tag">CS Student</span>
+                        <span class="role-divider">✦</span>
+                        <span class="role-tag">Full Stack Developer</span>
+                    </div>
+                    <p class="hero-description">
+                        Crafting scalable web applications and machine learning solutions.
+                        Finalist CS student graduating 2027 with hands-on full-stack expertise.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">
+                            View My Work
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            Let's Connect
+                            <i class="fas fa-comment"></i>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/AmanyireCI" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/amanyireci" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/amanyireci" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Code Window -->
-                <div class="code-window">
-                    <div class="window-header">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+                <div class="hero-visual">
+                    <div class="profile-wrapper">
+                        <div class="profile-glow"></div>
+                        <div class="profile-ring"></div>
+                        <div class="profile-image-container">
+                            <img 
+                                id="profileImage" 
+                                src="presentable-pics/sidee1.jpg" 
+                                alt="Amanyire Cindy" 
+                                class="profile-image"
+                            />
+                        </div>
+                        <div class="profile-status">
+                            <span class="status-dot"></span>
+                            Active Now
+                        </div>
+                        <div class="floating-card card-1">
+                            <i class="fas fa-code"></i>
+                            <span>8+ Projects</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>CS Finalist</span>
+                        </div>
                     </div>
-                    <pre><code><span class="comment">// Full Stack Developer</span>
-<span class="keyword">const</span> developer = {
-  <span class="property">name</span>: <span class="string">'AmanyireCI'</span>,
-  <span class="property">role</span>: <span class="string">'Full Stack Developer'</span>,
-  <span class="property">status</span>: <span class="string">'CS Finalist'</span>,
-  <span class="property">skills</span>: [<span class="string">'React'</span>, <span class="string">'Node.js'</span>, <span class="string">'Python'</span>],
-  <span class="property">passion</span>: <span class="string">'Building Amazing Things'</span>,
-  <span class="property">available</span>: <span class="keyword">true</span>
-};</code></pre>
                 </div>
             </div>
+        </div>
+
+        <!-- Animated Background -->
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Passionate About <span class="gradient-text">Building & Learning</span></h2>
+            </div>
+            <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        I'm a Computer Science finalist with a strong passion for full-stack development and machine learning. 
-                        Through my academic journey and personal projects, I've developed expertise in building scalable web applications,
-                        implementing ML solutions, and solving complex technical problems.
+                        I'm a Computer Science finalist with an insatiable curiosity for 
+                        <span class="highlight-text">full-stack development</span> and 
+                        <span class="highlight-text">machine learning</span>. 
+                        My journey has been driven by a passion for creating solutions that 
+                        make a real impact.
                     </p>
                     <p>
-                        My portfolio includes real-world projects like a hotel booking website, an ML backend API, 
-                        and several other repositories showcasing my ability to work across different domains and technologies.
+                        From building robust web applications to implementing intelligent ML 
+                        systems, I thrive on solving complex problems and continuously 
+                        expanding my technical arsenal.
                     </p>
-                    <p>
-                        I'm graduating in a few months and actively seeking opportunities to contribute to innovative projects 
-                        and continue growing as a developer. I'm particularly interested in roles that involve full-stack development, 
-                        backend optimization, and ML integration.
-                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">2027</span>
+                            <span class="stat-label">Graduation</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>8+</h3>
-                        <p>Projects Completed</p>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Full Stack Dev</h4>
+                        <p>React, Node.js, Python, FastAPI</p>
                     </div>
-                    <div class="stat">
-                        <h3>4+</h3>
-                        <p>Technologies</p>
+                    <div class="highlight-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>ML Enthusiast</h4>
+                        <p>TensorFlow, Scikit-learn, Pandas</p>
                     </div>
-                    <div class="stat">
-                        <h3>🎓</h3>
-                        <p>CS Finalist</p>
+                    <div class="highlight-card">
+                        <i class="fas fa-cloud"></i>
+                        <h4>Cloud Ready</h4>
+                        <p>AWS, Docker, DevOps Practices</p>
                     </div>
                 </div>
             </div>
@@ -136,125 +184,129 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
             <div class="projects-grid">
-                <!-- Hotel Website Project -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-hotel"></i>
-                        </div>
-                        <div class="project-badges">
-                            <span class="badge featured">Featured</span>
-                            <span class="badge new">New</span>
-                        </div>
+                    <div class="project-image">
+                        <i class="fas fa-hotel"></i>
                     </div>
-                    <h3 class="project-title">Hotel Booking Website</h3>
-                    <p class="project-description">
-                        Full-stack hotel booking platform with user authentication, 
-                        room management, secure payment integration, and real-time availability tracking.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Stripe</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/AmanyireCI" target="_blank" class="link">
-                            <i class="fab fa-github"></i> Code
-                        </a>
-                        <a href="#" class="link">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag featured">Featured</span>
+                            <span class="project-tag new">New</span>
+                        </div>
+                        <h3 class="project-title">Hotel Booking Website</h3>
+                        <p class="project-description">
+                            Full-stack platform with authentication, room management, 
+                            payment integration, and real-time availability.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanyireCI" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ML Backend Project -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="project-badges">
-                            <span class="badge featured">Featured</span>
-                        </div>
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3 class="project-title">ML Backend API</h3>
-                    <p class="project-description">
-                        REST API service for machine learning model predictions with 
-                        data preprocessing, model serving, performance optimization, and monitoring.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/AmanyireCI" target="_blank" class="link">
-                            <i class="fab fa-github"></i> Code
-                        </a>
-                        <a href="#" class="link">
-                            <i class="fas fa-external-link-alt"></i> Docs
-                        </a>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag featured">Featured</span>
+                        </div>
+                        <h3 class="project-title">ML Backend API</h3>
+                        <p class="project-description">
+                            REST API for ML predictions with preprocessing, 
+                            model serving, optimization, and monitoring.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>TensorFlow</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanyireCI" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#">
+                                <i class="fas fa-external-link-alt"></i> Docs
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Additional Project 1 -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-code"></i>
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">E-Commerce</span>
                         </div>
-                    </div>
-                    <h3 class="project-title">E-Commerce Platform</h3>
-                    <p class="project-description">
-                        Full-featured e-commerce platform with product management, 
-                        shopping cart, order processing, and admin dashboard.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Prisma</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/AmanyireCI" target="_blank" class="link">
-                            <i class="fab fa-github"></i> Code
-                        </a>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            Full-featured platform with product management, 
+                            shopping cart, orders, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Prisma</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanyireCI" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Additional Project 2 -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-database"></i>
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Analytics</span>
                         </div>
-                    </div>
-                    <h3 class="project-title">Data Dashboard</h3>
-                    <p class="project-description">
-                        Interactive data visualization dashboard with real-time updates, 
-                        customizable widgets, and advanced filtering capabilities.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/AmanyireCI" target="_blank" class="link">
-                            <i class="fab fa-github"></i> Code
-                        </a>
+                        <h3 class="project-title">Data Dashboard</h3>
+                        <p class="project-description">
+                            Interactive visualization dashboard with real-time 
+                            updates, customizable widgets, and filtering.
+                        </p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanyireCI" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="projects-cta">
-                <p>Want to see more?</p>
-                <a href="https://github.com/AmanyireCI" target="_blank" class="btn btn-outline">
-                    Visit My GitHub <i class="fab fa-github"></i>
+                <a href="https://github.com/AmanyireCI" target="_blank" class="btn-outline">
+                    <i class="fab fa-github"></i> View All on GitHub
                 </a>
             </div>
         </div>
@@ -263,49 +315,64 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+            </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-paint-brush"></i> Frontend</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Frontend</h3>
                     <div class="skill-items">
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">HTML/CSS</span>
-                        <span class="skill-item">Tailwind CSS</span>
-                        <span class="skill-item">Responsive Design</span>
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>Tailwind</span>
+                        <span>Responsive Design</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend</h3>
                     <div class="skill-items">
-                        <span class="skill-item">Node.js</span>
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Express.js</span>
-                        <span class="skill-item">FastAPI</span>
-                        <span class="skill-item">REST APIs</span>
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>Express.js</span>
+                        <span>FastAPI</span>
+                        <span>REST APIs</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database & Tools</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database & Tools</h3>
                     <div class="skill-items">
-                        <span class="skill-item">MongoDB</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">AWS</span>
+                        <span>MongoDB</span>
+                        <span>PostgreSQL</span>
+                        <span>Git</span>
+                        <span>Docker</span>
+                        <span>AWS</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-robot"></i> Machine Learning</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
                     <div class="skill-items">
-                        <span class="skill-item">TensorFlow</span>
-                        <span class="skill-item">Scikit-learn</span>
-                        <span class="skill-item">Data Analysis</span>
-                        <span class="skill-item">Model Training</span>
-                        <span class="skill-item">Pandas/NumPy</span>
+                        <span>TensorFlow</span>
+                        <span>Scikit-learn</span>
+                        <span>Data Analysis</span>
+                        <span>Model Training</span>
+                        <span>Pandas/NumPy</span>
                     </div>
                 </div>
             </div>
@@ -315,57 +382,59 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">
-                I'm always interested in hearing about new opportunities and projects. 
-                Feel free to reach out!
-            </p>
-            <div class="contact-content">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+                <p class="contact-subtitle">
+                    Have a project in mind or want to collaborate? I'd love to hear from you!
+                </p>
+            </div>
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-card">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
                             <a href="mailto:your.email@example.com">your.email@example.com</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-github"></i>
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
                         <div>
                             <h4>GitHub</h4>
                             <a href="https://github.com/AmanyireCI" target="_blank">@AmanyireCI</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-linkedin"></i>
+                    <div class="contact-card">
+                        <i class="fab fa-linkedin-in"></i>
                         <div>
                             <h4>LinkedIn</h4>
                             <a href="https://linkedin.com/in/amanyireci" target="_blank">AmanyireCI</a>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-card">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Location</h4>
-                            <p>Open to Remote & On-site Opportunities</p>
+                            <p>Open to Remote & On-site</p>
                         </div>
                     </div>
                 </div>
 
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" placeholder="Your Name" required />
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" placeholder="Your Email" required />
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject">
+                        <input type="text" placeholder="Subject" />
                     </div>
                     <div class="form-group">
                         <textarea placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn-primary">
                         Send Message <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
@@ -376,11 +445,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 AmanyireCI. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/AmanyireCI" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/amanyireci" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/amanyireci" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <p>&copy; 2026 Amanyire Cindy. Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
+            <div class="footer-social">
+                <a href="https://github.com/AmanyireCI" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/amanyireci" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/amanyireci" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
