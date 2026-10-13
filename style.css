@@ -27,6 +27,11 @@
     
     --shadow-glow: 0 0 40px rgba(108, 92, 231, 0.15);
     --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+    --nav-bg: rgba(10, 10, 15, 0.8);
+    --nav-bg-scrolled: rgba(10, 10, 15, 0.95);
+    --nav-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    --tag-new-color: #00cec9;
     
     --radius: 16px;
     --radius-sm: 8px;
@@ -34,6 +39,33 @@
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
     --font-display: 'Playfair Display', serif;
+}
+
+/* Light mode (dark stays the default) */
+[data-theme="light"] {
+    --bg-primary: #f7f7fb;
+    --bg-secondary: #eeeef6;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f3f1ff;
+
+    --text-primary: #14141f;
+    --text-secondary: #4a4a63;
+    --text-muted: #66667e;
+
+    --accent-2: #5b4bd8;
+    --accent-3: #00a8a3;
+    --accent-gradient: linear-gradient(135deg, #6c5ce7, #8e7ff0, #00a8a3);
+
+    --border-color: rgba(108, 92, 231, 0.25);
+    --border-hover: rgba(108, 92, 231, 0.5);
+
+    --shadow-glow: 0 0 40px rgba(108, 92, 231, 0.12);
+    --shadow-card: 0 20px 60px rgba(20, 20, 40, 0.12);
+
+    --nav-bg: rgba(228, 228, 236, 0.9);
+    --nav-bg-scrolled: rgba(228, 228, 236, 0.97);
+    --nav-shadow: 0 4px 30px rgba(20, 20, 40, 0.08);
+    --tag-new-color: #00807c;
 }
 
 html {
@@ -46,32 +78,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
-}
-
-/* ========================================
-   CUSTOM CURSOR
-   ======================================== */
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--accent-1);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-}
-
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 2px solid rgba(108, 92, 231, 0.3);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    transition: all 0.15s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ========================================
@@ -113,15 +120,15 @@ body {
     right: 0;
     z-index: 1000;
     padding: 16px 0;
-    background: rgba(10, 10, 15, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(108, 92, 231, 0.1);
     transition: all 0.4s ease;
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 15, 0.95);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    background: var(--nav-bg-scrolled);
+    box-shadow: var(--nav-shadow);
 }
 
 .nav-wrapper {
@@ -178,6 +185,33 @@ body {
 .nav-menu a:hover::after,
 .nav-menu a.active::after {
     width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-1);
+    color: var(--accent-1);
+    transform: rotate(20deg);
 }
 
 .nav-toggle {
@@ -723,6 +757,44 @@ body {
     padding: 100px 0;
 }
 
+.projects-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background: rgba(108, 92, 231, 0.2);
+    border-color: var(--accent-1);
+    color: var(--text-primary);
+}
+
+.projects-status {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -783,7 +855,7 @@ body {
 
 .project-tag.new {
     background: rgba(0, 206, 201, 0.2);
-    color: #00cec9;
+    color: var(--tag-new-color);
 }
 
 .project-title {

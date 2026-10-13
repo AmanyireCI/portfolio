@@ -10,12 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script>
+        // Follow the device theme unless the visitor picked one with the toggle.
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (e) {}
+            var deviceLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (saved === 'light' || (!saved && deviceLight)) document.documentElement.dataset.theme = 'light';
+        })();
+    </script>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -28,11 +33,16 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Switch to light mode">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -186,123 +196,13 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <h2 class="section-title">All My <span class="gradient-text">Projects</span></h2>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-hotel"></i>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span class="project-tag featured">Featured</span>
-                            <span class="project-tag new">New</span>
-                        </div>
-                        <h3 class="project-title">Hotel Booking Website</h3>
-                        <p class="project-description">
-                            Full-stack platform with authentication, room management, 
-                            payment integration, and real-time availability.
-                        </p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Stripe</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AmanyireCI" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span class="project-tag featured">Featured</span>
-                        </div>
-                        <h3 class="project-title">ML Backend API</h3>
-                        <p class="project-description">
-                            REST API for ML predictions with preprocessing, 
-                            model serving, optimization, and monitoring.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>TensorFlow</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AmanyireCI" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#">
-                                <i class="fas fa-external-link-alt"></i> Docs
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span class="project-tag">E-Commerce</span>
-                        </div>
-                        <h3 class="project-title">E-Commerce Platform</h3>
-                        <p class="project-description">
-                            Full-featured platform with product management, 
-                            shopping cart, orders, and admin dashboard.
-                        </p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>TypeScript</span>
-                            <span>Prisma</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AmanyireCI" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span class="project-tag">Analytics</span>
-                        </div>
-                        <h3 class="project-title">Data Dashboard</h3>
-                        <p class="project-description">
-                            Interactive visualization dashboard with real-time 
-                            updates, customizable widgets, and filtering.
-                        </p>
-                        <div class="project-tech">
-                            <span>Vue.js</span>
-                            <span>D3.js</span>
-                            <span>Express</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AmanyireCI" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="projects-filters" id="projectFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <p class="projects-status" id="projectsStatus">Loading projects...</p>
             </div>
             <div class="projects-cta">
                 <a href="https://github.com/AmanyireCI" target="_blank" class="btn-outline">
